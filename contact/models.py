@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-#owner(foreign key)
+# owner(foreign key)
 
 class Category(models.Model):
     class Meta:
@@ -14,6 +14,7 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
 
 class Contact(models.Model):
     first_name = models.CharField(max_length=50)
