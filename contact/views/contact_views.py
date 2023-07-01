@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from contact.models import Contact
-from django.http import Http404
 
 
 def index(request):
@@ -31,4 +30,3 @@ def contact(request, contact_id):
         'contact/contact.html',
         context,
     )
-
