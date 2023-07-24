@@ -7,26 +7,13 @@ from django.contrib.auth import password_validation
 
 
 class ContactForm(forms.ModelForm):
-    # first_name = forms.CharField(
-        # widget=forms.TextInput(
-            # attrs={
-                # 'class': 'classe-a classe-b',
-                # 'placeholder': 'Aqui veio do init',
-            # }
-        # ),
-        # label='Primeiro nome',
-        # help_text='Texto de ajuda para o usuário',
-    # )
-
-    # def __init__(self, *args, **kwargs):
-        # super().__init__(*args, **kwargs)
-
     picture = forms.ImageField(
         widget=forms.FileInput(
             attrs={
                 'accept': 'image/*',
             }
-        )
+        ),
+        required=False
     )
 
     class Meta:
